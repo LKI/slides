@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>scrapy</title>
+
+    <link rel="stylesheet" href="http://www.liriansu.com/static/css/reveal/reveal.css">
+    <link rel="stylesheet" href="http://www.liriansu.com/static/css/reveal/themes/black.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="http://www.liriansu.com/static/css/reveal/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'http://www.liriansu.com/static/css/reveal/print-pdf.css' : 'http://www.liriansu.com/static/css/reveal/print-paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+        # Summary
+
+        * **Python**
+        * Scrapy
+        * Example
+
+        </section>
+        <section>
+          <section data-markdown>
+          ## Python
+
+          * Is a:    high-level / general-purpose / interpreted / dynamic language
+          * Slogan:  There is only one way to do it
+          * Nice at: REPL (Read-Eval-Print Loop)
+
+          ![pygirl](pygirl.jpg)
+
+          </section>
+          <section data-markdown>
+          ### Language Popularity
+
+          ![pypopularity](pypopularity.jpg)
+
+          </section>
+          <section data-markdown>
+          ### The Zen of Python, by Tim Peters
+
+          * python -c "import this"
+
+          ```
+          Beautiful is better than ugly.
+          Explicit is better than implicit.
+          Simple is better than complex.
+          Complex is better than complicated.
+          Flat is better than nested.
+          Sparse is better than dense.
+          Readability counts.
+          Special cases aren't special enough to break the rules.
+          Although practicality beats purity.
+          Errors should never pass silently.
+          Unless explicitly silenced.
+          In the face of ambiguity, refuse the temptation to guess.
+          There should be one-- and preferably only one --obvious way to do it.
+          Although that way may not be obvious at first unless you're Dutch.
+          Now is better than never.
+          Although never is often better than *right* now.
+          If the implementation is hard to explain, it's a bad idea.
+          If the implementation is easy to explain, it may be a good idea.
+          Namespaces are one honking great idea -- let's do more of those!
+          ```
+
+          </section>
+        </section>
+        <section data-markdown>
+        # Summary
+
+        * Python
+        * **Scrapy**
+        * Example
+
+        </section>
+        <section>
+          <section data-markdown>
+          ## Scrapy
+
+          * Scrapy, a fast high-level web crawling & scraping framework for Python
+          * Easy Install: `pip install scrapy`
+          * Scrapy shell
+
+          </section>
+          <section data-markdown>
+          ### Spider Intro
+
+          * Start url
+          * Request (url, headers, meta...)
+          * Middleware (cookie, user-agent...)
+          * Response (url, status, headers, body...)
+
+          </section>
+          <section data-markdown>
+          ### Xpath
+
+          * Select element in domtree
+
+          ![xpath](xpath.jpg)
+
+          </section>
+        </section>
+        <section data-markdown>
+        # Summary
+
+        * Python
+        * Scrapy
+        * **Example**
+
+        </section>
+        <section>
+          <section data-markdown>
+          ## Example
+
+          * Ask Question at any time
+
+          </section>
+          <section data-markdown>
+          ### Try Python
+
+          </section>
+          <section data-markdown>
+          ### Try Scrapy (mainly for scrapy shell)
+
+          </section>
+          <section data-markdown>
+          ### Write a Small spider on show
+
+          </section>
+          <section data-markdown>
+          ### Some Resources
+
+          * Learn Python https://learnxinyminutes.com/docs/python/
+          * Scrapy docs  http://doc.scrapy.org/en/latest/intro/overview.html
+          * WeScraper    https://github.com/LKI/wescraper
+          </section>
+        </section>
+        <section>
+          <h1>Thank you</h1>
+          <p>You can find this slide at <div id="qr-url">-</div> or scan this QR code</p>
+          <canvas id="qr-code"></canvas>
+          <script src="http://liriansu.com/static/js/qr.min.js"></script>
+          <script>
+            qr.canvas({
+              canvas: document.getElementById("qr-code"),
+              level : "H",
+              size  : 8,
+              value : "http://liriansu.com/slides/scrapy-intro"
+            });
+            document.getElementById("qr-url").innerHTML = "http://liriansu.com/slides/scrapy-intro";
+          </script>
+        </section>
+      </div>
+    </div>
+    <div style="display: block; position: absolute; bottom: 16px; margin-left: 50px; z-index: 20;">
+      <p class="reveal" style="font-size: 15px;">Page generated by <a href="https://github.com/LKI/md2reveal">@md2reveal</a></p>
+    </div>
+
+    <script src="http://www.liriansu.com/static/js/reveal.head.min.js"></script>
+    <script src="http://www.liriansu.com/static/js/reveal.js"></script>
+
+    <script>
+      Reveal.initialize({
+        history: true,
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+        { src: 'http://www.liriansu.com/static/js/reveal-marked.js' },
+        { src: 'http://www.liriansu.com/static/js/reveal-markdown.js' },
+        { src: 'http://www.liriansu.com/static/js/reveal-notes.js', async: true },
+        { src: 'http://www.liriansu.com/static/js/reveal-highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
