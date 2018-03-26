@@ -6,3 +6,5 @@ to generate slides from markdown to HTML.
 ## Slides list
 
 * [Scrapy Introduction](http://liriansu.com/slides/scrapy-intro)
+* [如何带节奏](http://www.liriansu.com/slides/influence)
+
