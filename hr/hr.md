@@ -1,12 +1,11 @@
-# HR 进阶之路
+# HR Career
 
 
 ## Outline
 
-* 数据
-* 分析
-* 未来
-* 举例
+* Data
+* Analyze
+* Future
 
 
 ## Data
