@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>index</title>
+
+    <link rel="stylesheet" href="http://www.liriansu.com/static/css/reveal/reveal.css">
+    <link rel="stylesheet" href="http://www.liriansu.com/static/css/reveal/themes/black.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="http://www.liriansu.com/static/css/reveal/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'http://www.liriansu.com/static/css/reveal/print-pdf.css' : 'http://www.liriansu.com/static/css/reveal/print-paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+        # Golang Experience
+
+
+        </section>
+        <section data-markdown>
+        ## Outline
+
+        * Grammar
+        * Project
+        * Feeling
+        * TODOs
+
+
+        </section>
+        <section>
+          <section data-markdown>
+          ## Grammar
+
+          ![reserved_words](reserved_words.png)
+
+
+          </section>
+          <section data-markdown>
+          ### Loops
+
+          ```go
+          // for all condition
+          for {
+              fmt.Println("while true...")
+          }
+
+          // for keys/values in dict-like data
+          data := map[string]string{
+              "key": "value",
+          }
+          for key, value := range data {
+              fmt.Println("while true...")
+          }
+          ```
+
+          </section>
+          <section data-markdown>
+          ### Enum
+
+          ```go
+          // iota is enum keyword
+          const {
+              Unknown = iota  // 0
+              Male    = iota  // 1
+              Female  = iota  // 2
+          }
+
+          // expression is as well supported
+          const {
+              Unknown = iota * 10  // 0
+              Male    = iota * 10  // 10
+              Female  = iota * 10  // 20
+          }
+          ```
+
+          </section>
+          <section data-markdown>
+          ### Error
+
+          ```go
+          if f, err := file.Open(path); err != nil {
+              return Response(400, err.Error())
+          }
+
+          if data, ok := json.Unmarshal(body); !ok {
+              return Response(400, "invalid json body")
+          }
+          ```
+
+          </section>
+          <section data-markdown>
+          ### Goroutine
+
+          ```go
+          func sendTemplate() {
+              // pyjy with wechat
+          }
+
+          func handleRequest(ctx Context) {
+              validate()
+              // sendTemplate()
+              go sendTemplate()
+          }
+          ```
+
+
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+          ## Project
+
+          * [python.org](https://www.python.org/)
+          * [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+          * [golang.org](https://golang.org/)
+
+          </section>
+          <section data-markdown>
+          ### Environment
+
+          * [GOPATH](https://golang.org/doc/code.html)
+          * go fmt/go vet/go test
+          * package
+
+          </section>
+          <section data-markdown>
+          ### Production
+
+          * [modules](https://github.com/gin-gonic/gin)
+          * document
+          * configuration
+          * CI:build,compile,deploy
+          * wrk it
+
+          </section>
+          <section data-markdown>
+          ### Community
+
+          </section>
+        </section>
+        <section data-markdown>
+        * [golang.org](https://golang.org/doc/effective_go.html#errors)
+        * [github.com](https://github.com/golang/go/wiki/CodeReviewComments)
+
+
+        </section>
+        <section>
+          <section data-markdown>
+          ## Feeling
+
+          </section>
+          <section data-markdown>
+          ### I'm vegetable
+
+          * grammar simplify
+          * pointers
+          * libraries
+
+          </section>
+          <section data-markdown>
+          ### I like it
+
+          * Simple
+          * [Gopher](https://github.com/egonelbre/gophers)
+          * Fast (in server side)
+
+          </section>
+          <section data-markdown>
+          ### Go in ZaiHui
+
+          * edge services
+          * performance-critical services
+          * multi languages/services
+          * multi developer teams
+
+
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+          ## TODOs
+
+          - pisces for production
+          - [metric, logging, tracing](https://peter.bourgon.org/go-for-industrial-programming/)
+          - development utilities
+          - services infrastructure
+          </section>
+        </section>
+        <section>
+          <h1>Thank you</h1>
+          <p>You can find this slide at <div id="qr-url">-</div> or scan this QR code</p>
+          <canvas id="qr-code"></canvas>
+          <script src="http://liriansu.com/static/js/qr.min.js"></script>
+          <script>
+            qr.canvas({
+              canvas: document.getElementById("qr-code"),
+              level : "H",
+              size  : 8,
+              value : window.location.href
+            });
+            document.getElementById("qr-url").innerHTML = window.location.href;
+          </script>
+        </section>
+      </div>
+    </div>
+    <div style="display: block; position: absolute; bottom: 16px; margin-left: 50px; z-index: 20;">
+      <p class="reveal" style="font-size: 15px;">Page generated by <a href="https://github.com/LKI/md2reveal">@md2reveal</a></p>
+    </div>
+
+    <script src="http://www.liriansu.com/static/js/reveal.head.min.js"></script>
+    <script src="http://www.liriansu.com/static/js/reveal.js"></script>
+
+    <script>
+      Reveal.initialize({
+        history: true,
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+        { src: 'http://www.liriansu.com/static/js/reveal-marked.js' },
+        { src: 'http://www.liriansu.com/static/js/reveal-markdown.js' },
+        { src: 'http://www.liriansu.com/static/js/reveal-notes.js', async: true },
+        { src: 'http://www.liriansu.com/static/js/reveal-highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
