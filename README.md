@@ -17,6 +17,7 @@
 | 2019-07 | [基础算法介绍][algo] | 研发队友 | 常用的算法简介：分治、搜索、动态规划 |
 | 2019-12 | [Vim 元编程][metavim] | 研发队友 | 通过 Vim 使用元编程来改变编码习惯 |
 | 2020-03 | [忒修斯之船][theseus] | 研发队友 | 借助忒修斯之船的思想实验，来讨论“我是谁” |
+| 2020-05 | [如何在沟通中跟别人吵起来][evil] | 研发队友 | 用反论的方法，来看沟通这件事 |
 
 [algo]: https://liriansu.com/slides/algo/
 [deployment]: https://github.com/LKI/slides/blob/gh-pages/deployment/main.tpp
@@ -29,4 +30,5 @@
 [scrapy]: https://liriansu.com/slides/scrapy-intro/
 [theseus]: https://liriansu.com/slides/theseus/theseus.html
 [visibility]: https://liriansu.com/slides/visibility/
+[evil]: https://liriansu.com/slides/evil/
 
